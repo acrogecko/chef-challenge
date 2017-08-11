@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.communicator = 'winrm'
 
 # Ensure that all networks are set to private
-  #config.windows.set_work_network = true
+  config.windows.set_work_network = true
 
   config.vm.define "win", primary: true do |vmconfig|
     # vmconfig.vm.network :private_network, ip: SERVER_IP
