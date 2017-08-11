@@ -1,0 +1,21 @@
+[submodule "chef/cookbooks/chef_handler"]
+	path = chef/cookbooks/chef_handler
+	url = https://github.com/chef-cookbooks/chef_handler.git
+[submodule "chef/cookbooks/firewall"]
+	path = chef/cookbooks/firewall
+	url = https://github.com/chef-cookbooks/firewall.git
+[submodule "chef/cookbooks/iis"]
+	path = chef/cookbooks/iis
+	url = https://github.com/chef-cookbooks/iis.git
+[submodule "chef/cookbooks/ohai"]
+	path = chef/cookbooks/ohai
+	url = https://github.com/chef-cookbooks/ohai.git
+[submodule "chef/cookbooks/windows"]
+	path = chef/cookbooks/windows
+	url = https://github.com/chef-cookbooks/windows.git
+[submodule "chef/cookbooks/chef-sugar"]
+	path = chef/cookbooks/chef-sugar
+	url = https://github.com/sethvargo/chef-sugar.git
+[submodule "chef/cookbooks/wsus-client"]
+	path = chef/cookbooks/wsus-client
+	url = https://github.com/criteo-cookbooks/wsus-client.git
