@@ -39,12 +39,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # Chef provisioner
-  config.vm.provision "chef_zero" do |chef|
+  # Needs help to make sure info placed in nodes_path doesn't span vagrant destroy
+  config.vm.provision :shell, inline: 'mkdir -Force C:\chef\cache\nodes'
+  config.vm.provision "chef_solo" do |chef|
     chef.verbose_logging = true
-    chef.cookbooks_path = "chef/cookbooks"
-    chef.nodes_path = "chef/nodes"
+    chef.cookbooks_path = 'chef/cookbooks'
+    chef.nodes_path = 'C:\chef\cache\nodes'
     # Run list
-    chef.add_recipe "challenge_role"
+    chef.add_recipe 'challenge_role'
   end
 
 end

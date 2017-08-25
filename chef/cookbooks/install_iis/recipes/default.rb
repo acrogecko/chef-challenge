@@ -36,7 +36,7 @@ iis_site 'icons' do
   action :add
 end
 
-iis_application content_project do
+iis_app content_project do
   site_name 'icons'
   path '/'
   physical_path "#{content_base}\icons"
@@ -47,9 +47,7 @@ end
 # Enable and setup firewall for web server
 ##########################################
 
-firewall 'default' do
-	action :install
-end
+firewall 'default'
 
 firewall_rule 'http' do
   port     80
